@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="SuperApp" id="ot1"/>
+    </amx:facet>
+    <amx:inputText label="Enter X" id="it1" inputType="number" value="#{pageFlowScope.x}"/>
+    <amx:inputText label="Enter Y" id="it2" inputType="number" value="#{pageFlowScope.y}"/>
+    <amx:commandButton text="Show place" id="cb3"/>
+    <dvtm:geographicMap id="geomp1" centerX="#{pageFlowScope.x}" centerY="#{pageFlowScope.y}">
+      <dvtm:pointDataLayer id="pdl1" animationOnDataChange="alphaFade"/>
+    </dvtm:geographicMap>
+  </amx:panelPage>
+</amx:view>

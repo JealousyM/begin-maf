@@ -1,0 +1,32 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="ci" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="ci">
+        <Contents>
+          <restconnection name="ci" url="http://api.geonames.org/countryInfo"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="ciUrl" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="ciUrl">
+        <Contents>
+          <urlconnection name="ciUrl" url="http://api.geonames.org/countryInfo"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="SyncService_base_connection" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="SyncService_base_connection">
+        <Contents>
+          <urlconnection name="SyncService_base_connection" url="http://127.0.0.1"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>
